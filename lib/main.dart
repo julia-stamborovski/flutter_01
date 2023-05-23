@@ -14,62 +14,83 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Stack(
-              alignment: AlignmentDirectional.center,
-              children: [
-                Container(
-                  color: Colors.pink,
-                  width: 200,
-                  height: 200,
-                ),
-                Container(
-                  color: Colors.deepPurple,
-                  width: 100,
-                  height: 100,
-                ),
-              ],
-            ),
-            Stack(
-              alignment: AlignmentDirectional.center,
-              children: [
-                Container(
-                  color: Colors.deepPurple,
-                  width: 200,
-                  height: 200,
-                ),
-                Container(
-                  color: Colors.pink,
-                  width: 100,
-                  height: 100,
-                ),
-              ],
-            ),
-            Row(
+        home: Container(
+            color: Colors.black,
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  color: Colors.red,
-                  height: 30,
-                  width: 30,
+                Stack(
+                  alignment: AlignmentDirectional.center,
+                  children: [
+                    Container(
+                      color: Colors.pink,
+                      width: 200,
+                      height: 200,
+                    ),
+                    Container(
+                      color: Colors.deepPurple,
+                      width: 100,
+                      height: 100,
+                    ),
+                  ],
+                ),
+                Stack(
+                  alignment: AlignmentDirectional.center,
+                  children: [
+                    Container(
+                      color: Colors.deepPurple,
+                      width: 200,
+                      height: 200,
+                    ),
+                    Container(
+                      color: Colors.pink,
+                      width: 100,
+                      height: 100,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      height: 30,
+                      width: 30,
+                    ),
+                    Container(
+                      color: Colors.cyan,
+                      height: 30,
+                      width: 30,
+                    ),
+                    Container(
+                      color: Colors.red,
+                      height: 30,
+                      width: 30,
+                    ),
+                  ],
                 ),
                 Container(
-                  color: Colors.cyan,
+                  color: Colors.blueGrey,
                   height: 30,
-                  width: 30,
+                  width: 300,
+                  child: Text(
+                    'first app',
+                    style: TextStyle(
+                      color: Colors.black26,
+                      fontSize: 28,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-                Container(
-                  color: Colors.red,
-                  height: 30,
-                  width: 30,
-                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('click');
+                  },
+                  child: Text('click'),
+                )
               ],
-            )
-          ],
-        ));
+            )));
   }
 }
